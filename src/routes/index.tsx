@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 
-import Dashboard from "../pages/Dashboard";
+import { Dashboard } from "../pages/Dashboard";
 
 export function Routes() {
   return (
@@ -9,5 +9,3 @@ export function Routes() {
     </Switch>
   );
 }
-
-export default Routes;

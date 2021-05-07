@@ -3,23 +3,15 @@ import { FiEdit3, FiTrash } from "react-icons/fi";
 
 import { Container } from "./styles";
 import api from "../../services/api";
+import { FoodProps } from "contexts/FoodContext";
 
-interface Food {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  available: boolean;
-  image: string;
-}
-
-interface FoodProps {
-  food: Food;
+interface ThisFoodProps {
+  food: FoodProps;
   handleDelete: (id: number) => void;
-  handleEditFood: (food: Food) => void;
+  handleEditFood: (food: FoodProps) => void;
 }
 
-export function Food({ food, handleDelete, handleEditFood }: FoodProps) {
+export function Food({ food, handleDelete, handleEditFood }: ThisFoodProps) {
   const [isAvailable, setIsAvailable] = useState(false);
 
   async function toggleAvailable() {
